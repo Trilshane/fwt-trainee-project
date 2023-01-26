@@ -1,0 +1,62 @@
+.picturePost {
+  width: 360px;
+  height: 275px;
+  margin: 5px;
+  position: relative;
+  border: 1px solid none;
+  border-radius: 15px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (max-width: 1365px) {
+    width: 300px;
+    height: 230px;
+  }
+  @media screen and (max-width: 1023px) {
+    width: 340px;
+    height: 249px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 280x;
+    height: 205px;
+  }
+}
+.picturePostInformation {
+  background: rgba(255, 255, 255, 0.75);
+  position: absolute;
+  transform: translateY(-35px);
+  transition: 0.7s;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+.picturePostInformationHead {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 18px;
+  margin: 5px auto 5px 15px;
+  line-height: 23px;
+}
+
+.picturePostInformationDate {
+  margin-left: 15px;
+  margin-top: 0;
+  p {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0;
+  }
+  span {
+    font-weight: 300;
+    margin-left: 8px;
+  }
+}
+.picturePost:hover {
+  .picturePostInformation {
+    transform: translateY(-145px);
+  }
+}

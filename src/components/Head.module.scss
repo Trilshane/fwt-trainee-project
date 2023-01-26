@@ -1,0 +1,11 @@
+.headWrapper {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.themeButton {
+  color: var(--button-color);
+  font-size: 25px;
+  cursor: pointer;
+}

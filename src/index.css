@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  font-family: "Roboto";
+  background-color: var(--background-color);
+  transition: background-color 200ms linear;
+}
+
+html[data-theme="dark"] {
+  --background-color: black;
+  --color: #ffffff;
+  --border-color: #ffffff;
+  --button-color: #ffffff;
+  --input-color: #0c0c0c;
+  --active-item-background: #ffffff;
+  --active-item--color: black;
+}
+
+html[data-theme="light"] {
+  --background-color: #ffffff;
+  --color: black;
+  --border-color: black;
+  --button-color: black;
+  --input-color: #ffffff;
+  --active-item-background: black;
+  --active-item--color: #ffffff;
+}

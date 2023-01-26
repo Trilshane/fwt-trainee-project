@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+.wrapper {
+  margin: 0 123px;
+  @media screen and (max-width: 1365px) {
+    margin: 0 42px;
+  }
+  @media screen and (max-width: 1023px) {
+    margin: 0 34px;
+  }
+  @media screen and (max-width: 767px) {
+    margin: 0 20px;
+  }
+}

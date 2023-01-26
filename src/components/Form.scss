@@ -1,0 +1,85 @@
+.custom-select {
+  &__control {
+    width: 265px !important;
+    height: 45px !important;
+    background-color: var(--input-color) !important;
+    transition: background-color 500ms linear !important;
+    border: none !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    font-size: 13px !important;
+    &--menu-is-open {
+      border-color: var(--border-color) !important;
+      border-bottom: none !important;
+      box-shadow: none !important;
+      border-bottom-left-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    }
+    &-placeholder-text {
+      text-align: left;
+    }
+    @media screen and (max-width: 1365px) {
+      width: 220px !important;
+    }
+    @media screen and (max-width: 1023px) {
+      width: 160px !important;
+    }
+    @media screen and (max-width: 767px) {
+      width: 280px !important;
+      margin-bottom: 15px !important;
+    }
+  }
+  &__value-container {
+    padding: 15px auto 15px 15px !important;
+    text-align: start;
+  }
+  &__single-value {
+    color: var(--color) !important;
+  }
+  &__indicator {
+    cursor: pointer !important;
+  }
+  &__indicator-separator {
+    display: none !important;
+  }
+  &__menu {
+    width: 265px !important;
+    font-size: 16px !important;
+    margin-top: 0 !important;
+    background-color: var(--input-color) !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border: 1px solid var(--border-color) !important;
+    @media screen and (max-width: 1365px) {
+      width: 220px !important;
+    }
+    @media screen and (max-width: 1023px) {
+      width: 160px !important;
+    }
+    @media screen and (max-width: 767px) {
+      width: 280px !important;
+    }
+    &-list::-webkit-scrollbar {
+      width: 9px;
+      height: 50px;
+    }
+
+    &-list::-webkit-scrollbar-thumb {
+      background-color: #7b7b7b;
+      border-radius: 25px;
+    }
+  }
+  &__option {
+    cursor: pointer !important;
+    color: var(--color) !important ;
+    &--is-selected {
+      background-color: var(--active-item-background) !important;
+      color: var(--active-item--color) !important;
+    }
+    &--is-focused {
+      background-color: var(--active-item-background) !important;
+      color: var(--active-item--color) !important;
+    }
+  }
+}

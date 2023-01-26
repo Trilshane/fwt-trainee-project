@@ -1,0 +1,42 @@
+.paginationBTN {
+  width: 41px;
+  height: 41px;
+  font-size: 18px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color);
+  transition: background-color 500ms linear !important;
+  color: var(--color);
+  border-right: none;
+  &:hover {
+    background: gray;
+    color: var(--active-item--color);
+    cursor: pointer;
+  }
+}
+
+.rightBorderBTN {
+  border-right: 1px solid;
+  &:hover {
+    border-right: 1px solid var(--border-color);
+  }
+}
+.activeBTN {
+  color: var(--active-item--color);
+  background-color: var(--active-item-background);
+  border: 1px solid var(--border-color);
+  &:hover {
+    color: var(--active-item--color);
+    background-color: var(--active-item-background);
+    border: 1px solid var(--border-color);
+  }
+}
+button:disabled {
+  color: gray;
+  border-color: gray;
+}
+button:disabled:hover {
+  background: var(--background-color);
+  color: gray;
+  cursor: default;
+  border-color: gray;
+}
