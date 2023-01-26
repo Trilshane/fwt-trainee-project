@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fwt-trainee-project/static/css/main.211cf606.css",
+    "main.js": "/fwt-trainee-project/static/js/main.fb06caf6.js",
+    "index.html": "/fwt-trainee-project/index.html",
+    "main.211cf606.css.map": "/fwt-trainee-project/static/css/main.211cf606.css.map",
+    "main.fb06caf6.js.map": "/fwt-trainee-project/static/js/main.fb06caf6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.211cf606.css",
+    "static/js/main.fb06caf6.js"
+  ]
+}
