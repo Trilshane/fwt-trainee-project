@@ -4,7 +4,7 @@ import TitleContext from "./Context";
 import "./Form.scss";
 
 const FormsAuthors = () => {
-  const { currnetAuthor, setCurrentAuthor, authorsOptions } =
+  const { currnetAuthor, setCurrentAuthor, authorsOptions, setCurrentPage } =
     useContext(TitleContext);
   const getValueAuthor = () => {
     return currnetAuthor
@@ -12,6 +12,7 @@ const FormsAuthors = () => {
       : "";
   };
   const onChangeAuthors = (newValue) => {
+    setCurrentPage(1);
     setCurrentAuthor(newValue);
   };
 

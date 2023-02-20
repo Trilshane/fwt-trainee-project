@@ -3,14 +3,19 @@ import Select from "react-select";
 import TitleContext from "./Context";
 
 const FormsLocations = () => {
-  const { currentLocation, setCurrentLocation, locationOptions } =
-    useContext(TitleContext);
+  const {
+    currentLocation,
+    setCurrentLocation,
+    locationOptions,
+    setCurrentPage,
+  } = useContext(TitleContext);
   const getValue = () => {
     return currentLocation
       ? locationOptions.find((location) => location.value === currentLocation)
       : "";
   };
   const onChange = (newValue) => {
+    setCurrentPage(1);
     setCurrentLocation(newValue);
   };
 

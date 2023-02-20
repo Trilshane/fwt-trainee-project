@@ -5,7 +5,8 @@ import { useContext, useEffect, useState } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
 import TitleContext from "./Context";
 const FormRange = () => {
-  const { setQueryFrom, setQueryBefore } = useContext(TitleContext);
+  const { setQueryFrom, setQueryBefore, setCurrentPage } =
+    useContext(TitleContext);
   const [isActive, setActive] = useState(false);
   useEffect(() => {}, []);
   return (
@@ -41,15 +42,21 @@ const FormRange = () => {
               min="1000"
               max="2000"
               placeholder="from"
-              onChange={(e) => setQueryFrom(e.target.value)}
-            />{" "}
+              onChange={(e) => {
+                setCurrentPage(1);
+                setQueryFrom(e.target.value);
+              }}
+            />
             <span>&mdash;</span>
             <input
               type="number"
               min="1000"
               max="2000"
               placeholder="before"
-              onChange={(e) => setQueryBefore(e.target.value)}
+              onChange={(e) => {
+                setCurrentPage(1);
+                setQueryBefore(e.target.value);
+              }}
             />
           </div>
         )}

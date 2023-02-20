@@ -48,12 +48,20 @@ const GalleryOfPaintings = () => {
       .catch((error) => setError(error.message));
   }, [locationLoaded, authorsLoaded]);
 
-  const { currnetAuthor, currentLocation, query, queryFrom, queryBefore } =
-    useContext(TitleContext);
-  const [currentPage, setCurrentPage] = useState(1);
+  const {
+    currentPage,
+    setCurrentPage,
+    currnetAuthor,
+    currentLocation,
+    query,
+    queryFrom,
+    queryBefore,
+  } = useContext(TitleContext);
+
   const [paintingPerPage] = useState(12);
   const lastPaintingIndex = currentPage * paintingPerPage;
   const firstPaintingIndex = lastPaintingIndex - paintingPerPage;
+
   const pantigsFiltered = paintings.filter((painting) => {
     if (
       !currnetAuthor &&
@@ -71,7 +79,6 @@ const GalleryOfPaintings = () => {
           painting.locationId === currentLocation.value
         );
       }
-
       return painting.authorId === currnetAuthor.value;
     } else if (currentLocation) {
       if (currnetAuthor) {

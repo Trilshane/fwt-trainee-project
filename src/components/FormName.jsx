@@ -3,14 +3,17 @@ import styles from "./Forms.module.scss";
 import TitleContext from "./Context";
 
 const FormName = () => {
-  const { setQuery } = useContext(TitleContext);
+  const { setQuery, setCurrentPage } = useContext(TitleContext);
 
   return (
     <input
       placeholder="Name"
       type="text"
       className={styles.formName}
-      onChange={(e) => setQuery(e.target.value)}
+      onChange={(e) => {
+        setCurrentPage(1);
+        setQuery(e.target.value);
+      }}
     />
   );
 };

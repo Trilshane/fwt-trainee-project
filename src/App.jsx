@@ -44,6 +44,8 @@ function App() {
   //input Range query
   const [queryFrom, setQueryFrom] = useState("");
   const [queryBefore, setQueryBefore] = useState("");
+
+  const [currentPage, setCurrentPage] = useState(1);
   return (
     <TitleContext.Provider
       value={{
@@ -59,6 +61,8 @@ function App() {
         setQueryFrom,
         queryBefore,
         setQueryBefore,
+        currentPage,
+        setCurrentPage,
       }}
     >
       <div className="App">
